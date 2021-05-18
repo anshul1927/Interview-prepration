@@ -23,17 +23,17 @@ int main()
         if (visited[i] == 0)
         {
             queue<int> q;
-            q.push(0);
-            visited[0] = true;
+            q.push(i);
+            visited[i] = 1;
 
             while (!q.empty())
             {
-                int node = q.front();
+                i = q.front();
                 q.pop();
 
-                bfs.push_back(node);
+                bfs.push_back(i);
 
-                for (auto it : adj[node])
+                for (auto it : adj[i])
                 {
                     if (!visited[it])
                     {
