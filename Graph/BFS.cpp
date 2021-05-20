@@ -13,6 +13,7 @@ int main()
         int u, v1;
         cin >> u >> v1;
         adj[u].push_back(v1);
+        adj[v1].push_back(u);
     }
 
     vector<int> visited(v, 0);
@@ -28,12 +29,12 @@ int main()
 
             while (!q.empty())
             {
-                i = q.front();
+                int node = q.front();
                 q.pop();
 
-                bfs.push_back(i);
+                bfs.push_back(node);
 
-                for (auto it : adj[i])
+                for (auto it : adj[node])
                 {
                     if (!visited[it])
                     {

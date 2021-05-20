@@ -9,15 +9,15 @@ bool cycleBFS(int i, int parent, vector<int> &visited, vector<int> adj[])
 
     while (!q.empty())
     {
-        i = q.front().first;
+        int node = q.front().first;
         parent = q.front().second;
         q.pop();
-        for (auto it : adj[i])
+        for (auto it : adj[node])
         {
             if (!visited[it])
             {
                 visited[it] = 1;
-                q.push({it, i});
+                q.push({it, node});
             }
             else if (it != parent)
             {
