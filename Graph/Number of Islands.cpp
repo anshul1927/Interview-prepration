@@ -7,7 +7,7 @@ using namespace std;
 class Solution
 {
 public:
-    void dfs(int row, int col, vector<vector<char>> &grid)
+    void dfs(int row, int col, vector<vector<char>> &grid, int &area)
     {
 
         if (row < 0 || row >= grid.size() || col < 0 || col >= grid[0].size() || grid[row][col] != '1')
@@ -16,11 +16,12 @@ public:
         }
 
         grid[row][col] = '2';
+        area++;
 
-        dfs(row + 1, col, grid);
-        dfs(row, col + 1, grid);
-        dfs(row, col - 1, grid);
-        dfs(row - 1, col, grid);
+        dfs(row + 1, col, grid, area);
+        dfs(row, col + 1, grid, area);
+        dfs(row, col - 1, grid, area);
+        dfs(row - 1, col, grid, area);
     }
 
     int numIslands(vector<vector<char>> &grid)
@@ -32,8 +33,10 @@ public:
             {
                 if (grid[i][j] == '1')
                 {
-                    dfs(i, j, grid);
+                    int area = 0;
+                    dfs(i, j, grid, area);
                     ans++;
+                    cout << "area " << area << endl;
                 }
             }
         }
