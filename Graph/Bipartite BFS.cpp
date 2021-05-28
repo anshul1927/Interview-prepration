@@ -12,7 +12,6 @@ bool bipartite(int i, vector<int> adj[], int color[])
     {
         int node = q.front();
         q.pop();
-
         for (auto it : adj[node])
         {
             if (color[it] == -1)
