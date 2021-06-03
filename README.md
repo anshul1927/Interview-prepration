@@ -4,7 +4,7 @@
 
 ```
 Data Structures
-|- Graph
+|- [Graph]()
 |- Heap
 
 ```
