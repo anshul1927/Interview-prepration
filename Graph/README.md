@@ -29,7 +29,7 @@
 |                                   DisJoint sets                                   |                          [cpp](./DisJointset.cpp)                           |   ✅   |
 |                                       []()                                        |                                   [cpp]()                                   |   ❎   |
 
-### leetcode
+### leetcode + InterView Bit
 |   No.    |                                                           Problem                                                           |                             Solutions                             |       |
 | :------: | :-------------------------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------: | :---: |
 | `lc 909` |                            [snake and ladder](https://leetcode.com/problems/snakes-and-ladders/)                            |                 [cpp](./snake%20and%20ladder.cpp)                 |   ✅   |
