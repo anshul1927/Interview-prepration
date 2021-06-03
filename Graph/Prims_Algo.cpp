@@ -5,7 +5,7 @@ In prims algorithm :-
     then choose minimum edge weight edge attach to node that which we selected
     then we have 2 nodes which are connected.
     now check minimum edge which are connected to the both the 2 nodes which we selected above and attach to the it's adjacent already selected
-    node.   
+    node.
     do  it again.
 */
 

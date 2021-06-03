@@ -14,7 +14,7 @@ void dijkstra(vector<vector<pair<int, int>>> &adj, int n, int src)
 
     while (!pq.empty())
     {
-        int dist = pq.top().first;
+        // int dist = pq.top().first;
         int node = pq.top().second;
 
         pq.pop();
@@ -35,6 +35,7 @@ void dijkstra(vector<vector<pair<int, int>>> &adj, int n, int src)
         cout << it << " ";
     }
 }
+
 int main()
 {
     int n;
