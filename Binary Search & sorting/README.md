@@ -2,11 +2,17 @@
 
 ### Algorithms
 
-|               Problem               |                       Solutions                        |       |
-| :---------------------------------: | :----------------------------------------------------: | :---: |
-|            Binary Search            |               [cpp](./BinarySearch.cpp)                |   ✅   |
-|   first and last occurance of key   | [cpp](./first%20and%20last%20occurance%20of%20key.cpp) |   ✅   |
-| leftmost-column-with-at-least-a-one |    [cpp](./leftmost-column-with-at-least-a-one.cpp)    |   ✅   |
+|               Problem               |                              Solutions                               |       |
+| :---------------------------------: | :------------------------------------------------------------------: | :---: |
+|            Binary Search            |                      [cpp](./BinarySearch.cpp)                       |   ✅   |
+|   first and last occurance of key   |        [cpp](./first%20and%20last%20occurance%20of%20key.cpp)        |   ✅   |
+| leftmost-column-with-at-least-a-one |           [cpp](./leftmost-column-with-at-least-a-one.cpp)           |   ✅   |
+|             Merge Sort              |                      [cpp](./merge%20sort.cpp)                       |   ✅   |
+|             Quick Sort              |                      [cpp](./Quick%20sort.cpp)                       |   ✅   |
+|        kth smallest elements        | [cpp](./kth%20smallest%20element%20in%20array%20using%20sorting.cpp) |   ✅   |
+|           Inversion count           |                    [cpp](./Inversion%20count.cpp)                    |   ✅   |
+|            counting sort            |                     [cpp](./counting%20sort.cpp)                     |   ✅   |
+
 
 ### leetcode & Interview Bit
 |    No.    |                                                        Problem                                                        |                   Solutions                    |       |
