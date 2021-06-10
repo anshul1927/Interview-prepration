@@ -7,7 +7,7 @@
 - [Bit Manipulation]() 
 - [Binary Search & Sorting](./Binary%20Search%20&%20sorting/README.md) 
 - [Maths]() 
-- [Linked List]() 
+- [Linked List](./Linked%20List/README.md) 
 - [Stack & Queue]() 
 - [Recursion & BackTracking](./Recursion%20&%20Backtracking/README.md) 
 - [Tree](./Tree/README.md) 
