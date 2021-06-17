@@ -27,6 +27,9 @@ int main()
             {
                 dp[i][j] = 0;
             }
+            // i-1 because dp array start from 0 and we have n start from 1 to n so for checking through weight array
+            // we have to check i-1 Position
+            // in dp[i][-]  if i==1 that man i==0 in weight array so.
             else if (wt[i - 1] > j)
             {
                 dp[i][j] = dp[i - 1][j];

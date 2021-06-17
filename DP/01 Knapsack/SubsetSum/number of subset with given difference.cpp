@@ -38,10 +38,10 @@ using namespace std;
 
 int isSubsetSum(vector<int> &a, int n, int sum, int diff)
 {
-    bool dp[sum + 1];
+    int dp[sum + 1];
 
-    memset(dp, false, sizeof dp);
-    dp[0] = true;
+    memset(dp, 0, sizeof dp);
+    dp[0] = 1;
 
     for (auto el : a)
     {
@@ -49,7 +49,7 @@ int isSubsetSum(vector<int> &a, int n, int sum, int diff)
         {
             if (el <= i)
             {
-                dp[i] = dp[i] || dp[i - el];
+                dp[i] = dp[i] + dp[i - el];
             }
         }
     }
@@ -62,7 +62,7 @@ int isSubsetSum(vector<int> &a, int n, int sum, int diff)
         int second = sum - i;
         if (dp[i] && (diff == abs(first - second)))
         {
-            ans++;
+            ans = dp[i];
         }
     }
 

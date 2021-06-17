@@ -5,16 +5,15 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-/**
- * Definition for singly-linked list.
- * struct ListNode {
- *     int val;
- *     ListNode *next;
- *     ListNode() : val(0), next(nullptr) {}
- *     ListNode(int x) : val(x), next(nullptr) {}
- *     ListNode(int x, ListNode *next) : val(x), next(next) {}
- * };
- */
+// Definition for singly-linked list.
+struct ListNode
+{
+    int val;
+    ListNode *next;
+    ListNode() : val(0), next(nullptr) {}
+    ListNode(int x) : val(x), next(nullptr) {}
+    ListNode(int x, ListNode *next) : val(x), next(next) {}
+};
 class Solution
 {
 public:
@@ -49,23 +48,56 @@ public:
 
     ListNode *mergeKLists(vector<ListNode *> &lists)
     {
-        if (lists.size() == 0 or (lists.size() == 1 and lists[0] == nullptr))
+
+        // priority queue ( min heap approach to getting minimum element from all the list).
+        ListNode *head = new ListNode(0);
+        ListNode *p = head;
+
+        priority_queue<pair<int, ListNode *>, vector<pair<int, ListNode *>>, greater<pair<int, ListNode *>>> pq;
+
+        for (auto it : lists)
         {
-            return nullptr;
+            if (it)
+                pq.push({it->val, it});
         }
 
-        if (lists.size() == 1 and lists[0] != nullptr)
-        {
-            return lists[0];
-        }
-        ListNode *c = lists[0];
-
-        for (int i = 1; i < lists.size(); i++)
+        while (!pq.empty())
         {
 
-            c = merge(c, lists[i]);
+            int val = pq.top().first;
+            ListNode *node = pq.top().second;
+
+            pq.pop();
+
+            p->next = node;
+            p = p->next;
+            node = node->next;
+
+            if (node)
+            {
+                pq.push({node->val, node});
+            }
         }
 
-        return c;
+        return head->next;
+
+        // if (lists.size() == 0 or (lists.size() == 1 and lists[0] == nullptr))
+        // {
+        //     return nullptr;
+        // }
+
+        // if (lists.size() == 1 and lists[0] != nullptr)
+        // {
+        //     return lists[0];
+        // }
+        // ListNode *c = lists[0];
+
+        // for (int i = 1; i < lists.size(); i++)
+        // {
+
+        //     c = merge(c, lists[i]);
+        // }
+
+        // return c;
     }
 };
